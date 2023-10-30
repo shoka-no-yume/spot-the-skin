@@ -56,7 +56,7 @@ const DOWNLOAD_PANEL = {
             <h2 :style="'color: var(--'+titleColor+')'">{{title}}</h2>
             <p v-html="countDownMessage"></p>
             <p>{{thankYouMessage}}</p>
-            <p>If you like my work feel free to donate / tip any amount in one of below ways.<br />Thank you for your support <img width="24" src="/img/love.webp" /></p>
+            <p>If you like my work feel free to donate / tip any amount in one of below ways.<br />Thank you for your support <img width="24" src="/spot-the-skin/img/love.webp" /></p>
 
             <table>
                 <tr>
@@ -72,7 +72,7 @@ const DOWNLOAD_PANEL = {
                     <th>NANO</th>
                 </tr>
                 <tr>
-                    <td><img class='qr-address' src="/img/nano.png" /></td>
+                    <td><img class='qr-address' src="/spot-the-skin/img/nano.png" /></td>
                 </tr>
             </table>
 
@@ -81,7 +81,7 @@ const DOWNLOAD_PANEL = {
                     <th>MONERO</th>
                 </tr>
                 <tr>
-                    <td><img class='qr-address' src="/img/xmr.png" /></td>
+                    <td><img class='qr-address' src="/spot-the-skin/img/xmr.png" /></td>
                 </tr>
             </table>
 
