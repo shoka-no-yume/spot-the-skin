@@ -8,7 +8,7 @@
     position: relative;
 }
 .sts-card.front-card{
-    background-image: url(/img/game/card-bg.png);
+    background-image: url(/spot-the-skin/img/game/card-bg.png);
     background-size: 100%;
 }
 .sts-card > .card-skin{
@@ -53,34 +53,34 @@
     top: 40.51%;
 }
 
-.card-skin.angel{background-image: url(/img/game/skins/angel.png);}
-.card-skin.banana{background-image: url(/img/game/skins/banana.png);}
-.card-skin.beachball{background-image: url(/img/game/skins/beachball.png);}
-.card-skin.bomb{background-image: url(/img/game/skins/bomb.png);}
-.card-skin.botroyale{background-image: url(/img/game/skins/botroyale.png);}
-.card-skin.cat{background-image: url(/img/game/skins/cat.png);}
-.card-skin.cherry{background-image: url(/img/game/skins/cherry.png);}
-.card-skin.citrus{background-image: url(/img/game/skins/citrus.png);}
-.card-skin.cobra{background-image: url(/img/game/skins/cobra.png);}
-.card-skin.coconut{background-image: url(/img/game/skins/coconut.png);}
-.card-skin.devil{background-image: url(/img/game/skins/devil.png);}
-.card-skin.discoball{background-image: url(/img/game/skins/discoball.png);}
-.card-skin.egg{background-image: url(/img/game/skins/egg.png);}
-.card-skin.floater{background-image: url(/img/game/skins/floater.png);}
-.card-skin.frankie{background-image: url(/img/game/skins/frankie.png);}
-.card-skin.ghost{background-image: url(/img/game/skins/ghost.png);}
-.card-skin.moneybag{background-image: url(/img/game/skins/moneybag.png);}
-.card-skin.moon{background-image: url(/img/game/skins/moon.png);}
-.card-skin.mummy{background-image: url(/img/game/skins/mummy.png);}
-.card-skin.ninja{background-image: url(/img/game/skins/ninja.png);}
-.card-skin.owl{background-image: url(/img/game/skins/owl.png);}
-.card-skin.pizza{background-image: url(/img/game/skins/pizza.png);}
-.card-skin.potion{background-image: url(/img/game/skins/potion.png);}
-.card-skin.royman{background-image: url(/img/game/skins/royman.png);}
-.card-skin.saturn{background-image: url(/img/game/skins/saturn.png);}
-.card-skin.spy{background-image: url(/img/game/skins/spy.png);}
-.card-skin.target{background-image: url(/img/game/skins/target.png);}
-.card-skin.virus{background-image: url(/img/game/skins/virus.png);}
-.card-skin.waffle{background-image: url(/img/game/skins/waffle.png);}
-.card-skin.watermelon{background-image: url(/img/game/skins/watermelon.png);}
-.card-skin.wheeee{background-image: url(/img/game/skins/wheeee.png);}
+.card-skin.angel{background-image: url(/spot-the-skin/img/game/skins/angel.png);}
+.card-skin.banana{background-image: url(/spot-the-skin/img/game/skins/banana.png);}
+.card-skin.beachball{background-image: url(/spot-the-skin/img/game/skins/beachball.png);}
+.card-skin.bomb{background-image: url(/spot-the-skin/img/game/skins/bomb.png);}
+.card-skin.botroyale{background-image: url(/spot-the-skin/img/game/skins/botroyale.png);}
+.card-skin.cat{background-image: url(/spot-the-skin/img/game/skins/cat.png);}
+.card-skin.cherry{background-image: url(/spot-the-skin/img/game/skins/cherry.png);}
+.card-skin.citrus{background-image: url(/spot-the-skin/img/game/skins/citrus.png);}
+.card-skin.cobra{background-image: url(/spot-the-skin/img/game/skins/cobra.png);}
+.card-skin.coconut{background-image: url(/spot-the-skin/img/game/skins/coconut.png);}
+.card-skin.devil{background-image: url(/spot-the-skin/img/game/skins/devil.png);}
+.card-skin.discoball{background-image: url(/spot-the-skin/img/game/skins/discoball.png);}
+.card-skin.egg{background-image: url(/spot-the-skin/img/game/skins/egg.png);}
+.card-skin.floater{background-image: url(/spot-the-skin/img/game/skins/floater.png);}
+.card-skin.frankie{background-image: url(/spot-the-skin/img/game/skins/frankie.png);}
+.card-skin.ghost{background-image: url(/spot-the-skin/img/game/skins/ghost.png);}
+.card-skin.moneybag{background-image: url(/spot-the-skin/img/game/skins/moneybag.png);}
+.card-skin.moon{background-image: url(/spot-the-skin/img/game/skins/moon.png);}
+.card-skin.mummy{background-image: url(/spot-the-skin/img/game/skins/mummy.png);}
+.card-skin.ninja{background-image: url(/spot-the-skin/img/game/skins/ninja.png);}
+.card-skin.owl{background-image: url(/spot-the-skin/img/game/skins/owl.png);}
+.card-skin.pizza{background-image: url(/spot-the-skin/img/game/skins/pizza.png);}
+.card-skin.potion{background-image: url(/spot-the-skin/img/game/skins/potion.png);}
+.card-skin.royman{background-image: url(/spot-the-skin/img/game/skins/royman.png);}
+.card-skin.saturn{background-image: url(/spot-the-skin/img/game/skins/saturn.png);}
+.card-skin.spy{background-image: url(/spot-the-skin/img/game/skins/spy.png);}
+.card-skin.target{background-image: url(/spot-the-skin/img/game/skins/target.png);}
+.card-skin.virus{background-image: url(/spot-the-skin/img/game/skins/virus.png);}
+.card-skin.waffle{background-image: url(/spot-the-skin/img/game/skins/waffle.png);}
+.card-skin.watermelon{background-image: url(/spot-the-skin/img/game/skins/watermelon.png);}
+.card-skin.wheeee{background-image: url(/spot-the-skin/img/game/skins/wheeee.png);}
