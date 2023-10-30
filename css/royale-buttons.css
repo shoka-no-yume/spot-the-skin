@@ -1,0 +1,65 @@
+.royale-btn{
+    display: inline-block;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2rem;
+    border-radius: 1.3rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    padding: .5rem 2rem;
+    text-transform: uppercase;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.royale-btn.yellow{
+    background-color: var(--yellow);
+    border: 2px solid var(--yellow);
+}
+.royale-btn.yellow:hover{
+    color: var(--yellow);
+    background-color: var(--primary-color);
+}
+
+.royale-btn.cyan{
+    background-color: var(--cyan);
+    border: 2px solid var(--cyan);
+}
+.royale-btn.cyan:hover{
+    color: var(--cyan);
+    background-color: var(--primary-color);
+}
+
+.royale-btn.magenta{
+    background-color: var(--magenta);
+    border: 2px solid var(--magenta);
+}
+.royale-btn.magenta:hover{
+    color: var(--magenta);
+    background-color: var(--primary-color);
+}
+
+.royale-btn.dark{
+    color: var(--primary-color);
+    background-color: var(--bg-dark);
+    border: 2px solid var(--bg-dark);
+}
+.royale-btn.dark:hover{
+    color: var(--bg-dark);
+    background-color: var(--primary-color);
+}
+
+.royale-btn.white{
+    background-color: #FFF;
+    border: 2px solid #FFF;
+}
+.royale-btn.white:hover{
+    color: #FFF;
+    background-color: var(--primary-color);
+}
+
+div.royale-btn-v-options > .royale-btn{
+    display: block;
+    margin: 10px auto;
+}

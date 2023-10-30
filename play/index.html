@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Play the online version of Spot the Skin and get a certificate with the shortest time you spotted all the skins. Share your certificate with your friends and see if they can beat your high score!">
+    <meta name="keywords" content="Crypto, Royale, Nano, ROY, Skin, Dobble, Spot It, reaction time, cards, game, playing cards, PDF">
+    <meta name="author" content="ROY_TO_THE_MOON">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/royale-inputs.css">
+    <link rel="stylesheet" href="/css/sts-card.css">
+    <link rel="stylesheet" href="/css/sts-game.css">
+    <title>Spot the Skin - Online Game</title>
+</head>
+<body>
+    <div id="app" v-cloak>
+        <img style="cursor: pointer;" @click="goToHomepage" class="logo" src="/img/sts-logo.png"/><br/>
+        <div v-if="status == 'form'">
+            <div>
+                <button @click="goToHomepage" class="royale-btn magenta">Go to homepage</button>
+            </div>
+            <div style="margin: 50px auto;">
+                <input v-model="nickname" type="text" class="royale-input" placeholder="Nickname"><br>
+                <span v-if="nicknameErrorMessage" style="color:red;">{{nicknameErrorMessage}}</span><br><br>
+                <button @click="playTheGame" class="royale-btn yellow">Play</button>
+            </div>
+        </div>
+        <div v-if="status == 'gameFinished'">
+            <h3>Game completed!</h3>
+            <div v-if="results.mistakes>0">
+                <p class="text-justify text-narrow">
+                    You have finished the game in {{millisToFormattedString(results.time)}}, but you have made {{results.mistakes}} mistake{{results.mistakes>=2 ? 's' : ''}}.
+                    To get the certificate you have to finish the game without any mistake. Good luck!
+                </p>
+            </div>
+            <div v-if="certificateRequirements">
+                <h4>Congratulations <span style="color: var(--cyan)">{{nickname}}</span>!</h4>
+                <p>
+                    You have finished the game in {{millisToFormattedString(results.time)}} without any mistake.
+                    Here is your certificate!
+                </p>
+                <img v-if="certificateUrl" class="sts-certificate" :src="certificateUrl"/>
+            </div>
+            <div class="royale-btn-v-options">
+                <a v-if="certificateRequirements" :href="certificateUrl" download="spot_the_skin_certificate.png">
+                    <button class="royale-btn cyan">Download certificate</button>
+                </a>
+                <button @click="playTheGame" class="royale-btn yellow">Play again</button>
+                <button @click="downloadPDF" class="royale-btn cyan">Download printable cards</button>
+                <button @click="goToHomepage" class="royale-btn magenta">Go to homepage</button>
+            </div>
+        </div>
+        <sts-game
+            ref="game"
+            @game-finished="gameFinished"
+        ></sts-game>
+        <div style="margin-bottom: 100px;"></div>
+    </div>
+    <script src="/js/utils.js"></script>
+    <script src="https://unpkg.com/vue@3.3.7/dist/vue.global.prod.js"></script>
+    <script src="/js/vue/sts-game.js"></script>
+    <script src="/js/vue/sts-card.js"></script>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    nickname: '',
+                    nicknameErrorMessage: '',
+                    status: 'form',
+                    results: null,
+                    certificateUrl: '',
+                }
+            },
+            methods: {
+                goToHomepage(){
+                    location.href = '/';
+                },
+                playTheGame(){
+                    if(!this.nickname.length){
+                        this.nicknameErrorMessage = 'Please provide your nickname first.';
+                        return;
+                    }
+                    this.nicknameErrorMessage = '';
+                    this.status = 'game';
+                    this.$refs.game.startNewGame();
+                },
+                gameFinished(gameResults){
+                    this.results = gameResults;
+                    this.status = 'gameFinished';
+                    if(this.certificateRequirements){
+                        this.createCertificate();
+                    }
+                },
+                downloadPDF(){
+                    location.href = '/download';
+                },
+                createCertificate(){
+                    let canvas = document.createElement("canvas");
+                    canvas.setAttribute("width", 1296);
+                    canvas.setAttribute("height", 915);
+                    let ctx = canvas.getContext("2d");
+                    let img = new Image();
+                    img.src = "/img/cert-bg.png";
+                    img.nick = this.nickname;
+                    img.time = this.results.time;
+                    img.ref = this;
+                    img.onload = function(){
+                        ctx.drawImage(this,0,0);
+                        ctx.strokeStyle = "#000000";
+                        ctx.lineWidth = 3;
+                        ctx.font = "86px Poppins";
+                        ctx.textAlign = "center";
+                        ctx.fillStyle = "#00ffc3";
+                        ctx.fillText(this.nick, 648, 330);
+                        ctx.strokeText(this.nick, 648, 330);
+                        ctx.font = "48px Poppins";
+                        ctx.fillStyle = "#ffffff";
+                        ctx.fillText("100% correct", 648, 425);
+                        ctx.fillText("Time: "+millisToFormattedString(this.time), 648, 500);
+                        ctx.lineWidth = 1;
+                        ctx.strokeText("100% correct", 648, 425);
+                        ctx.strokeText("Time: "+millisToFormattedString(this.time), 648, 500);
+                        ctx.font = "38px Poppins";
+                        ctx.fillStyle = "#e0f300";
+                        ctx.fillText("Awarded", 648, 780);
+                        ctx.strokeText("Awarded", 648, 780);
+                        ctx.font = "32px Poppins";
+                        const d = (new Date()).toUTCString();
+                        ctx.fillText(d, 648, 815);
+                        ctx.strokeText(d, 648, 815);
+                        img.ref.certificateUrl = canvas.toDataURL("data:image/png");
+                    };
+                },
+                millisToFormattedString: millisToFormattedString,
+            },
+            computed: {
+                certificateRequirements(){
+                    return this.results && Number.isInteger(this.results.mistakes) && this.results.mistakes==0;
+                },
+            },
+        }).component('sts-game', STS_GAME).component('sts-card', STS_CARD).mount('#app');
+    </script>
+</body>
+</html>

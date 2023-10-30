@@ -1,0 +1,9 @@
+.royale-gallery{
+    border-radius: 20px;
+    background-color: var(--bg-dark);
+    margin: 20px;
+}
+.royale-gallery .splide__slide img {
+    width: 70%;
+    height: auto;
+}

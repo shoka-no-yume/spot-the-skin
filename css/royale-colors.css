@@ -1,0 +1,13 @@
+:root {
+    --primary-color: #460E9A;
+    --card-bg-color: #2c2072;
+    --card-radius: 2rem;
+    --yellow: #e0f300;
+    --cyan: #00ffc3;
+    --magenta: #ff3beb;
+    --white: #fff;
+    --text-dark: #2c2073;
+    --bg-dark: #1c163f;
+    --bg-tooltip: #ff3beb;
+    --black: #000;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Do you know the game called Dobble / Spot It? Here is the Crypto Royale version! Spot the Skin!">
+    <meta name="keywords" content="Crypto, Royale, Nano, ROY, Skin, Dobble, Spot It, reaction time, cards, game, playing cards, PDF">
+    <meta name="author" content="ROY_TO_THE_MOON">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/royale-gallery.css">
+    <title>Spot the Skin</title>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" integrity="sha256-FZsW7H2V5X9TGinSjjwYJ419Xka27I8XPDmWryGlWtw=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+</head>
+<body>
+    <div id="app">
+        <img class="logo" src="img/sts-logo.png"/><br/>
+        <span>Made with <img onclick="heart()" class="inline-icon love-icon" style="cursor: pointer;" src="img/white-outline-heart.png" /> by ROY_TO_THE_MOON</span>
+        <p class="text-justify">
+            Spot the Skin is a Crypto Royale card game that is based on the 'Spot It' / 'Dobble' game.
+            Rules are pretty simple. Your task is to spot the Crypto Royale skin that is visible on both cards and name it before other players will.
+            If you choose to download PDF for making physical cards, you will find 31 cards with 31 unique Crypto Royale skins in total.
+            Each card has 6 skins and <b>always only one skin</b> shared between any two cards! You can play alone or up to 6 players.
+        </p>
+        <img class="metal-box" src="img/front-metal-box.png"/>
+        <h3>Rules</h3>
+        <p class="text-justify">
+            Place one card at the center of a table and share the rest of the cards between players.
+            At once, all players turn their cards up such a way they can see the skins only on one card, and now everyone try to spot the shared skin.
+            When the player spots the skin and name it, that player put their card on the pile of cards at the center of the table and now everyone is trying to
+            spot the shared skin between their top card and the card that was just placed on the pile.
+            The game ends when either one of the players placed all their cards or all the cards were placed on the table (depends on if you want to play for 2nd, 3rd, etc. places).
+        </p>
+        <p class="text-justify">
+            You can also try online version and get a certificate with the shortest time you spotted all the skins.
+            Share your certificate with your friends and see if they can beat your high score!
+        </p>
+        <button onclick="playOnline()" class="royale-btn yellow">Try it online</button>
+        <h3>Teaser</h3>
+        <video controls>
+            <source src="assets/SpotTheSkin.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video> 
+        <h3>Making cards</h3>
+        <p class="text-justify">
+            Instructions are included inside the printable PDF, but you can see the gallery below for reference how the process could look like.
+        </p>
+        <div class="royale-gallery" style="width: 80%; margin: 20px auto;">
+            <section id="making-cards-gallery" class="splide" aria-label="Making Spot the Skin cards images">
+                <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide"><img src="./img/making-cards-gallery/1.jpg" /></li>
+                            <li class="splide__slide"><img src="./img/making-cards-gallery/2.jpg" /></li>
+                            <li class="splide__slide"><img src="./img/making-cards-gallery/3.jpg" /></li>
+                            <li class="splide__slide"><img src="./img/making-cards-gallery/4.jpg" /></li>
+                            <li class="splide__slide"><img src="./img/making-cards-gallery/5.jpg" /></li>
+                            <li class="splide__slide"><img src="./img/making-cards-gallery/6.jpg" /></li>
+                            <li class="splide__slide"><img src="./img/making-cards-gallery/7.jpg" /></li>
+                            <li class="splide__slide"><img src="./img/making-cards-gallery/8.jpg" /></li>
+                            <li class="splide__slide"><img src="./img/making-cards-gallery/9.jpg" /></li>
+                            <li class="splide__slide"><img src="./img/making-cards-gallery/10.jpg" /></li>
+                            <li class="splide__slide"><img src="./img/making-cards-gallery/11.jpg" /></li>
+                            <li class="splide__slide"><img src="./img/making-cards-gallery/12.jpg" /></li>
+                        </ul>
+                </div>
+            </section>
+        </div>
+        <button onclick="downloadPDF()" class="royale-btn cyan" style="margin: 10px auto 20px;">Download PDF</button>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            new Splide('#making-cards-gallery', {
+                rewind: true,
+            }).mount();
+        });
+
+        const heartIcon = document.querySelector("#app img.love-icon")
+
+        function heart(){
+            heartIcon.src = "img/heart.png";
+        }
+
+        function downloadPDF(){
+            location.href = '/download';
+        }
+
+        function playOnline(){
+            location.href = '/play';
+        }
+    </script>
+</body>
+</html>

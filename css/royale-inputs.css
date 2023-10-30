@@ -1,0 +1,35 @@
+input[type="text"].royale-input{
+    font-size: 1.2rem;
+    border-radius: 1.3rem;
+    font-weight: 700;
+    padding: .5rem 2rem;
+    color: var(--cyan);
+    background-color: var(--bg-dark);
+    border-color: var(--text-dark);
+    width: 70%;
+    max-width: 200px;
+}
+input[type="text"].royale-input:focus{
+    border-color: var(--cyan);
+}
+
+div.royale-input label{
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    display: inline-block;
+}
+div.royale-input input[type="radio"]{
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: -1px;
+    vertical-align: middle;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    accent-color: var(--cyan);
+}
+div.inputs-narrow{
+    max-width: 200px;
+    width: 70%; margin:
+    10px auto;
+}
