@@ -8,9 +8,9 @@
     <meta name="keywords" content="Crypto, Royale, Nano, ROY, Skin, Dobble, Spot It, reaction time, cards, game, playing cards, PDF">
     <meta name="author" content="ROY_TO_THE_MOON">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/royale-download.css">
-    <link rel="stylesheet" href="/css/tooltip.css">
+    <link rel="stylesheet" href="/spot-the-skin/css/style.css">
+    <link rel="stylesheet" href="/spot-the-skin/css/royale-download.css">
+    <link rel="stylesheet" href="/spot-the-skin/css/tooltip.css">
     <title>Spot the Skin - Download PDF</title>
 </head>
 <body>
@@ -23,18 +23,18 @@
             title="Spot the Skin - printable cards PDF"
             title-color="cyan"
             :waiting-time="5"
-            download-link="/assets/spot_the_skin.pdf"
+            download-link="/spot-the-skin/assets/spot_the_skin.pdf"
             thank-you-message="Thank you for downloading Spot the Skin cards! I hope you will have fun making those cards and playing Spot the Skin game!"
         ></download-panel>
     </div>
-    <script src="/js/utils.js"></script>
+    <script src="/spot-the-skin/js/utils.js"></script>
     <script src="https://unpkg.com/vue@3.3.7/dist/vue.global.prod.js"></script>
-    <script src="/js/vue/download-panel.js"></script>
+    <script src="/spot-the-skin/js/vue/download-panel.js"></script>
     <script>
         Vue.createApp({
             methods: {
                 goToHomepage(){
-                    location.href = '/';
+                    location.href = '/spot-the-skin/';
                 }
             }
         }).component('download-panel', DOWNLOAD_PANEL).mount('#app');
